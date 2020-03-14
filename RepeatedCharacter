@@ -1,0 +1,44 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+	    
+		//code
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		sc.nextLine();
+		
+		while(t-->0)
+		{
+		    String str1=sc.nextLine();
+		    int var,var1;
+		    int found=0;
+		    int a[]=new int[256];
+		    for(int i=0;i<str1.length();i++)
+		    {
+		       var= (int)(str1.charAt(i));
+		       a[var]++;
+		    }
+		    for(int i=0;i<str1.length();i++)
+		    {
+		        var1= (int)(str1.charAt(i));
+		        if(a[var1]>1)
+		        {
+		            found=1;
+		            System.out.println(str1.charAt(i));
+		            break;
+		            
+		        }
+		        
+		    }
+		    if(found==0)
+		    {
+		        System.out.println("-1");
+		    }
+		       
+		    }
+	
+	}
+}
